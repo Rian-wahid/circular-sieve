@@ -30,10 +30,10 @@ async function circularSieve(n){
 
 	let smallPrimes=[2n,3n,5n,7n,11n,13n,17n]
 	if(n<2n**24n){
-		smallPrimes=[2n,3n,5n]
+		smallPrimes=[2n,3n,5n,7n]
 	}
 	if(n>2n**24n&&n<2n**32n){
-		smallPrimes=[2n,3n,5n,7n,11n]
+		smallPrimes=[2n,3n,5n,7n,11n,13n]
 	}
 	const initMods=[]
 	for(let i=0; i<smallPrimes.length; i++){
