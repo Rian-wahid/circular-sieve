@@ -128,7 +128,6 @@ async function circularSieve(n){
 				for(let i=0; i<workers.length; i++){
 					workers[i].terminate()
 					workers[i].unref()
-					workers[i]=null
 				}
 			}
 			for(let i=0; i<cpus-1; i++){ 
