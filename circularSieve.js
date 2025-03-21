@@ -33,7 +33,7 @@ async function circularSieve(n){
 		smallPrimes=[2n,3n,5n,7n]
 	}
 	if(n>2n**24n&&n<2n**32n){
-		smallPrimes=[2n,3n,5n,7n,11n,13n]
+		smallPrimes=[2n,3n,5n,7n,11n]
 	}
 	const initMods=[]
 	for(let i=0; i<smallPrimes.length; i++){
@@ -93,12 +93,12 @@ async function circularSieve(n){
 		for(let i=0; i<skips.length; i++){
 			range=range+skips[i]
 		}
-		let mul=n/range/BigInt(cpus-1)/10_000n
+		let mul=n/range/BigInt(cpus-1)
 		
-		if(mul>10_000n){
-			range=range*10_000n
+		if(mul>1000n){
+			range=range*1000n
 		}
-		if(mul>1n&&mul<=10_000n){
+		if(mul>1n&&mul<=1000n){
 			range=range*mul
 		}
 			
