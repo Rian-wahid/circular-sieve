@@ -93,7 +93,7 @@ async function circularSieve(n){
 		for(let i=0; i<skips.length; i++){
 			range=range+skips[i]
 		}
-		let mul=n/range/BigInt(cpus-1)
+		let mul=n/range/BigInt(cpus-1)/10_000n
 		
 		if(mul>10_000n){
 			range=range*10_000n
