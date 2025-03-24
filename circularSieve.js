@@ -29,6 +29,11 @@ async function circularSieve(n){
 	}
 
 	let smallPrimes=[2n,3n,5n,7n,11n,13n,17n]
+	for(let i=0; i<smallPrimes.length; i++){
+  	        if(n%smallPrimes[i]==0n){
+			return smallPrimes[i]
+		}
+	}
 	if(n<2n**24n){
 		smallPrimes=[2n,3n,5n,7n]
 	}
